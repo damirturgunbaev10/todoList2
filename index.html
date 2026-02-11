@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>To do app</title>
+  </head>
+  <body>
+    <div class="todo__list">
+      <h1 class="todo__title">To Do List</h1>
+      <input
+        class="todo__input"
+        id="todo__input"
+        type="text"
+        placeholder="Add a new task"
+      />
+      <button class="todo__btn" type="button">Add task</button>
+      <ul class="todo__ul"></ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="edit__modal">
+      <div class="edit__modal-content">
+        <h2 class="edit__modal__title">Edit Task</h2>
+        <input
+          class="edit__input"
+          id="edit__input"
+          type="text"
+          placeholder="Edit your task"
+        />
+
+        <div class="modal__buttons">
+          <button class="save__btn" type="button">Save changes</button>
+          <button class="cancel__btn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
