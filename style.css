@@ -235,5 +235,11 @@ ul {
 }
 
 .todo__text {
+  flex-grow: 1;
   margin-right: 10px;
+}
+li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
