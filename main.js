@@ -31,7 +31,7 @@ function renderTodos() {
         <button class="delete__btn" data-id="${todo.id}">
             ${todo.isCompleted ? "Restore" : "Done"}
         </button>
-        ${todo.isCompleted ? `<button class="remove__btn" data-id="${todo.id}" style="margin-left:5px; color:#ffcccc; background:none; border:none; cursor:pointer;">X</button>` : ""}
+        ${todo.isCompleted ? `<button class="remove__btn" data-id="${todo.id}" style="margin-left:5px; color:#ffcccc; background:none; border:none; cursor:pointer;">Delete</button>` : ""}
       </div>
     `;
 
@@ -52,8 +52,35 @@ function addTodo() {
     saveLocal();
     renderTodos();
     elToDoInput.value = "";
+    Toastify({
+      text: "Task added successfully!",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
   } else {
-    alert("Please enter a valid to-do item.");
+    Toastify({
+      text: "Please enter a valid todo item.",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #e43535, #f4b404)",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
   }
 }
 

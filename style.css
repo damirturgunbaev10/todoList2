@@ -233,3 +233,7 @@ ul {
 .cancel__btn:hover {
   background-color: #e09e52;
 }
+
+.todo__text {
+  margin-right: 10px;
+}
